@@ -1,0 +1,21 @@
+{
+  "name": "video_streaming_backend",
+  "version": "1.0.0",
+  "description": "backend for a video streaming and uploading platform (youtube clone)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "nodejs",
+    "authentication",
+    "youtube",
+    "clone",
+    "yt",
+    "clone"
+  ],
+  "author": "Shashwath Bhaskar",
+  "license": "ISC"
+}
