@@ -1,21 +1,26 @@
 import dotenv from 'dotenv';
-import express from 'express';
 import connectDB from './db/index.js';
+import {app} from './app.js'
 
 dotenv.config();
 
-connectDB();
-const app = express();
-
-
-
-app.listen(process.env.PORT, ()=>{
-  try {
-    console.log(`Server is running on PORT : ${process.env.PORT}`);
-  } catch (error) {
-    console.error("Error in starting server :", error)
-  }
+connectDB()
+.then(()=>{
+  app.listen(process.env.PORT || 8000, ()=>{
+    try {
+      console.log(`Server is running on PORT : ${process.env.PORT}`);
+    } catch (error) {
+      console.error("Error in starting server :", error)
+    }
+  })
 })
+.catch((err)=>{
+  console.error("MONGOD DB connection error :", err)
+})
+
+
+
+
 
 
 
